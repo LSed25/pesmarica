@@ -160,26 +160,24 @@ function goPreviousPage() {
         currentLocation--;
     }
 }
-//modal
+//modal image
 
 function openModal(imgs) {
     let modal = document.getElementById("myModal");
     let modalImg = document.getElementById("img01");
     let player = document.getElementById('player');
     player.style.display = "none";
-    //let captionText = document.getElementById("caption");
 
     modal.style.display = "block";
     modalImg.style.display = "block";
-    //captionText.style.display = "block";
+
     modalImg.src = imgs.src;
-    //captionText.innerHTML = imgs.alt;
+
 
     let span = document.getElementsByClassName("close")[0];
     span.onclick = function() {
         modal.style.display = "none";
         modalImg.style.display = "none";
-        //captionText.style.display = "none";
     }
 }
 
@@ -188,14 +186,12 @@ function playVideo(vid) {
     let modal = document.getElementById("myModal");
     let player = document.getElementById('player');
     console.log(vid.name);
-    //var video = document.getElementById('player');
 
-        //document.getElementById('trailer').onclick = function () {
     modal.style.display = "block";
     player.style.display = "block";
     player.setAttribute('src', vid.name);
     player.play();
-    //}
+
     
     let span = document.getElementsByClassName("close")[0];
     span.onclick = function() {

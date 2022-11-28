@@ -129,7 +129,8 @@ i {
     display: block;
     position: relative;
     overflow: hidden;
-    padding: 16px; 
+    padding: 12px;
+    margin: auto; 
 }
 
 .grid-container1 {
@@ -217,15 +218,15 @@ i {
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none;
+    position: fixed;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.458); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.456); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.458); 
+    background-color: rgba(0, 0, 0, 0.456);
     z-index: 60;
 }
 
@@ -242,7 +243,6 @@ i {
     to {transform:scale(1)}
   }
   
-  /* The Close Button */
 .close {
     position: absolute;
     top: 15px;
