@@ -152,8 +152,12 @@ i {
     grid-template-rows: auto;
 }
 .naslov {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     margin: auto;
-    width: auto;
+    
     padding: 10px;
     /*border-color: #fff70079;*/
     border-image: linear-gradient(to right,#00000000, rgb(148, 203, 30), #00000000) 30;
@@ -277,3 +281,173 @@ i {
     z-index: 1;
 }
 
+/*mobile*/
+@media screen and (max-width: 540px){
+    .book{
+        width:180px;
+        height: 370px;
+    }
+    p {
+        font-size: 1.2vw;
+        
+    }
+
+    h1 {
+        font-size: 2vw;
+    }
+
+    h2, h3, h4 {
+        font-size: 1.5vw;
+    }
+
+    li button {
+        font-size: 1vw;
+    }
+
+    .grid-container8 {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin:auto;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns:auto auto auto;
+        width: auto;
+        max-height: auto;
+        
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 811px) and (min-height: 530px){
+    .book{
+        width:45%;
+        height: 50%;
+    }
+
+    p {
+        font-size: 1vh;
+        
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    h2, h3, h4 {
+        font-size: 2vw;
+    }
+
+    li h3 {
+        font-size: 1.2vh;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns:auto auto auto;
+        width: auto;
+        max-height: auto;
+        
+    }
+
+
+    .grid-container8 {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        grid-template-rows:auto auto auto;
+        margin: auto;
+        width: auto;
+
+    }
+
+}
+
+/*tablet*/
+@media screen and (min-width: 811px) and (max-width: 1079px) and (min-height: 530px){
+    .book{
+        width:45%;
+        height: 95%;
+    }
+
+    p {
+        font-size: 1.9vh;
+        
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    h2, h3, h4 {
+        font-size: 2vw;
+    }
+
+    li h3 {
+        font-size: 1.9vh;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns:auto auto auto;
+        width: auto;
+        max-height: auto;
+        
+    }
+
+
+    .grid-container8 {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin:auto;
+        width: 90%;
+        height: 90%
+    }
+
+}
+
+@media screen and (min-width: 810px) and (max-width: 1079px) and (max-height: 530px) {
+    .book{
+        width:45%;
+        height: 95%;
+    }
+
+    p {
+        font-size: 1.9vh;
+        
+    }
+
+    h1 {
+        font-size: 2vw;
+    }
+
+    h2, h3, h4 {
+        font-size: 1vw;
+    }
+
+    li h3 {
+        font-size: 1.9vh;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns:auto auto auto;
+        width: auto;
+        max-height: auto;
+        
+    }
+
+    .grid-container8 {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 63%;
+
+    }
+
+}
