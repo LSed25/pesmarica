@@ -10,363 +10,376 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet"> 
         <link rel="icon" type="image/x-icon" href="./logo-gs-lara.png">
         <script src="./scripts.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/56b559e24a.js" crossorigin="anonymous"></script>
         
     </head>
     <body style="position: relative; overflow: hidden;">
-        <!--nazaj-->
-        <button class="gumb" id="prev-btn" style="left: 1%;">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <!--slike-modalno-->
-        <div id="myModal" class="modal">
-
-            <!-- The Close Button -->
-            <span class="close">&times;</span>
-          
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="img01" style="position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; ">
-            <video controls playsinline id="player" width="60%" style="position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; "></video>
-            <!-- Modal Caption (Image Text) -->
-            <div id="caption"></div>
+        <div id="msg" style="font-size:largest;">
+            <!-- you can set whatever style you want on this -->
+            Nalagam...
         </div>
-        
-        <!--pesmarica-->
-        <div id="book" class="book">
-            <!-- Paper 1 -->
-            <div id="p1" class="paper">
-                <div class="front">
-                    <div id="f1" class="front-content">
-                        <div class="grid-container8">                     
-                            <div class="grid-container1">
-                                <div class="grid-item"><img src="./cover-slike/SKM_C250i22042210190.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                <div class="grid-item"><img src="./cover-slike/vesele risbe-4.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013001 (1).jpg" style="width:100%" onclick="openModal(this);"></div>
-                            </div>
-                            <div class="grid-container">
-                                <div class="grid-container2">
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013010.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/vesele risbe-6.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22052012590 (1).jpg" style="width:100%" onclick="openModal(this);"></div>
+
+        <div id="body" style="display:none;">
+            <!--nazaj-->
+            <button class="gumb" id="prev-btn" style="left: 1%;">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <!--slike-modalno-->
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+            
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01" style="position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; ">
+                <video controls playsinline id="player" width="60%" style="position:fixed; top:0; bottom:0; left:0; right:0; margin:auto; "></video>
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+            </div>
+            
+            <!--pesmarica-->
+            <div id="book" class="book">
+                <!-- Paper 1 -->
+                <div id="p1" class="paper">
+                    <div class="front">
+                        <div id="f1" class="front-content">
+                            <div class="grid-container8">                     
+                                <div class="grid-container1">
+                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22042210190.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                    <div class="grid-item"><img src="./cover-slike/vesele risbe-4.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013001 (1).jpg" style="width:100%" onclick="openModal(this);"></div>
                                 </div>
-                                
-                                <div class="grid-container3">
-                                    <img src="./logo-gs-lara.png" style="width:20%; margin:30px; margin-left:40%">
-                                    <div class="naslov" style="background-image: radial-gradient(rgba(255, 255, 255, 0.482), rgba(255, 255, 255, 0));">
-                                        <h4 style="text-align:center;">E-pesmarica</h4>
-                                        <h3 style="text-align:center;">GLASBENI TOBOGAN</h3> 
-                                        <h3 style="text-align:center;">SLOVENSKIH LJUDSKIH PESMI</h3>
+                                <div class="grid-container">
+                                    <div class="grid-container2">
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013010.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/vesele risbe-6.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22052012590 (1).jpg" style="width:100%" onclick="openModal(this);"></div>
+                                    </div>
+                                    
+                                    <div class="grid-container3">
+                                        <img src="./logo-gs-lara.png" style="width:20%; margin:30px; margin-left:40%">
+                                        <div class="naslov" style="background-image: radial-gradient(rgba(255, 255, 255, 0.482), rgba(255, 255, 255, 0));">
+                                            <h4 style="text-align:center;">E-pesmarica</h4>
+                                            <h3 style="text-align:center;">GLASBENI TOBOGAN</h3> 
+                                            <h3 style="text-align:center;">SLOVENSKIH LJUDSKIH PESMI</h3>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="grid-container4">
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013000 (1).jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/vesele risbe-3.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013002.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22061011570.jpg" style="width:100%" onclick="openModal(this);"></div>
                                     </div>
                                 </div>
-                                
-                                <div class="grid-container4">
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013000 (1).jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/vesele risbe-3.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013002.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22061011570.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                <div class="grid-container7">
+                                    <div class="grid-container5">
+                                        <div class="grid-item"><img src="./cover-slike/vesele risbe-5.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                    </div>
+                                    <div class="grid-container6">
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22060712410.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/vesele risbe-1.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013003.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22052012591 (1).jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/vesele risbe-2.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                        <div class="grid-item"><img src="./cover-slike/SKM_C250i22052012570.jpg" style="width:100%" onclick="openModal(this);"></div>
+                                    </div>
                                 </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b1" class="back-content">
+                            <div style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
+                                <p style="text-align: center; border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; border-top-style: double; padding-top: 30px;"><strong>Mentorice učencev predšolske glasbene vzgoje, glasbene pripravnice, nauka o glasbi in solfeggia:</strong> Alenka Šon, Martina Jovič, Rosana Jakšič</p></br>
+                                <p style="text-align: center;"><strong>Ansambel učiteljev:</strong></br> 
+                                    Alenka Šon, klavir</br>
+                                    Boris Razboršek, harmonika</br>
+                                    Janja Brlec, citre</br>
+                                    Sonja Kodrič, kitara</br>
+                                    Matjaž Piavec, basovska kitara
+                                    </p></br>
+                                <p style="text-align: center; border-image: linear-gradient(to right,#00000000, rgb(148, 203, 30), rgba(255, 248, 58, 0)) 30; border-bottom-style: double; padding-bottom: 30px;">Posneto v Kulturnem centru Laško, 31. 5. 2022, in Domu kulture Radeče, 1. 6. 2022</p>
                             </div>
-                            <div class="grid-container7">
-                                <div class="grid-container5">
-                                    <div class="grid-item"><img src="./cover-slike/vesele risbe-5.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                </div>
-                                <div class="grid-container6">
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22060712410.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/vesele risbe-1.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22052013003.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22052012591 (1).jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/vesele risbe-2.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                    <div class="grid-item"><img src="./cover-slike/SKM_C250i22052012570.jpg" style="width:100%" onclick="openModal(this);"></div>
-                                </div>
-                            </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
-                <div class="back">
-                    <div id="b1" class="back-content">
-                        <div style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
-                            <p style="text-align: center; border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; border-top-style: double; padding-top: 30px;"><strong>Mentorice učencev predšolske glasbene vzgoje, glasbene pripravnice, nauka o glasbi in solfeggia:</strong> Alenka Šon, Martina Jovič, Rosana Jakšič</p></br>
-                            <p style="text-align: center;"><strong>Ansambel učiteljev:</strong></br> 
-                                Alenka Šon, klavir</br>
-                                Boris Razboršek, harmonika</br>
-                                Janja Brlec, citre</br>
-                                Sonja Kodrič, kitara</br>
-                                Matjaž Piavec, basovska kitara
-                                </p></br>
-                            <p style="text-align: center; border-image: linear-gradient(to right,#00000000, rgb(148, 203, 30), rgba(255, 248, 58, 0)) 30; border-bottom-style: double; padding-bottom: 30px;">Posneto v Kulturnem centru Laško, 31. 5. 2022, in Domu kulture Radeče, 1. 6. 2022</p>
+                <!-- Paper 2 -->
+                <div id="p2" class="paper">
+                    <div class="front">
+                        <div id="f2" class="front-content" style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
+                            <h1>E-pesmarica Glasbeni tobogan</h1>
+                        </br>   <p><strong>Spoštovani učenci, starši in ostali obiskovalci spletne strani, prisrčno pozdravljeni v naši družbi!</p>
+                        </br>   <p>Vsako šolsko leto načrtno vključujemo ljudsko tematiko v učni proces in dajemo slovenski ljudski pesmi pomembno vlogo pri našem glasbeno-plesnem ustvarjanju. Po Glasbenem toboganu se bomo spustili naravnost v zakladnico slovenskih ljudskih pesmi, v zakladnico, kjer so shranjeni najdragocenejši spomini naših prednikov – dedkov, babic, ki so jim jih zaupali njihovi dedki in babice, da so nam jih po spominu lahko prepevali.</p>
+                        <p>V E-pesmarici  lahko prisluhnete izštevankam, pesmim o živalih, delu, pripovednim pesmim, skratka o življenju preprostega človeka, ki je bilo že od nekdaj navdih za nastanek pesmi.</p>
+                        </br>   <p>Povabilu k pripravi in izvedbi nastopa ljudskih pesmi in izštevank so se odzvali učenci in učiteljice nauka o glasbi, solfeggia, predšolske glasbene vzgoje in glasbene pripravnice. V okviru predpisanih učnih vsebin vsako šolsko leto pri pouku obravnavamo tudi ljudsko tematiko. V šolskem letu 2021/2022 je bilo to  še s posebnim poudarkom na podpori projektu Erasmus+. Učenci so ustvarili tudi risbe in s tem obogatili E-pesmarico. Zahvaljujem se vsem snovalcem pesmarice in kolegom učiteljem, ki so spremljali učence z inštrumenti. Uporabnikom E-pesmarice želimo obilo užitkov ob poslušanju in učenju ljudskega gradiva.</p>
+                        </br>   <p>Rosana Jakšič, ravnateljica</p></strong>
+                            <!--<button name="https://www.dropbox.com/s/iprj2q887gfco4t/Dekle%20je%20po%20vodo%20%C5%A1la%20Ela%20A%C5%A1kerc%2C%20Anja%20Starc%2C%20Iris%20in%20Sara%20Kolari%C4%8D.mp4?raw=1" class="btn btn-sm btn-dark" id="trailer" style="font-size:large;" onclick="playVideo(this);">Ime Priimek</button>-->
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b2" class="back-content">
+                            <h1 style="border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; border-bottom-style: double; padding-bottom: 20px; margin-bottom: 20px;">Enota Laško</h1>
+                            
+                            <ul style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/p2v83z46gplr1m6/Kje%20so%20pesmice%20doma%20%28deklamacija%29%20Ema%20in%20Tim%20Kr%C3%BCcken%2C%20Anika%20Krasovec.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Kje so pesmice doma (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ema in Tim Krücken, Anika Krašovec</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/54cujllms0npcya/Zaj%C4%8Dek%2C%20al%27%20se%20ne%20boji%C5%A1%2C%20%20%20%20Biba%20leze%20u%C4%8Denci%20glasbene%20pripravnice.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Zajček, al' se ne bojiš,
+                                        Biba leze</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">učenci glasbene pripravnice</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/qnog8nc3rg8lcx6/Rasla%20je%20jelka%20Nejc%20%C5%BDupani%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Rasla je jelka</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Nejc Županič</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/2mrl2nxff6uj3yl/Gril%20gode%20%28deklamacija%29%20An%C5%BEe%20A%C5%A1kerc.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Gril gode (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Anže Aškerc</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/ss5aes1cnd1m03q/Igra%20v%20kolo%20jabolko%20Zarja%20Juhart.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Igra v kolo jabolko</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Zarja Juhart</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/wjlmd6scb98k61q/Oj%2C%20lepo%20je%20res%20na%20de%C5%BEeli%20Mia%20Rezec.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Oj, lepo je res na deželi</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Mia Rezec</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/onj56mu3i1dq3ro/Marko%20ska%C4%8De%20Maj%20%C5%A0ola%20Oro%C5%BEim.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Marko skače</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Maj Šola Orožim</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/t24aq4n13wq8y98/Koko%C5%A1ke%20%28deklamacija%29%20Zoja%20Omahna.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Kokoške (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Zoja Omahna</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/97d3rm7qlsdbu52/Pozdravljena%2C%20trobentica%20Ur%C5%A1ka%20Holcer.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Pozdravljena, trobentica</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Urška Holcer</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/0rklnrnc4g6jtv9/Majhna%20sem%20bila%20Lara%20Jan%C4%8Di%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Majhna sem bila</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lara Jančič</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/6iw61kimzepjg6z/Ple%C5%A1i%2C%20ple%C5%A1i%2C%20%C4%8Drni%20kos%20Leon%20Razbor%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Pleši, pleši, črni kos</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Leon Razboršek</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/nhisrgrbi5v0a24/Na%C5%A1a%20%C5%A0pela%20%28deklamacija%29%20Ivana%20Ambro%C5%BE.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Naša Špela (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ivana Ambrož</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/rs23xsw6t9md4qq/Izak%2C%20Jakob%2C%20Abraham%20An%C5%BEe%20Stopar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Izak, Jakob, Abraham</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Anže Stopar</h3></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paper 3 -->
+                <div id="p3" class="paper">
+                    <div class="front">
+                        <div id="f3" class="front-content">
+                            <ul style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/u8erm56zo9dcnpp/Janko%2C%20kaj%20bo%C5%A1%20jutri%20delal%20Mija%20in%20Miha%20Mavrin.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Janko, kaj boš jutri delal</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Mija in Miha Mavrin</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/ikpjb1zc3e73tg1/Sem%20deklica%20mlada%2C%20vesela%20%C5%A0pela%20Knez.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Sem deklica mlada, vesela</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Špela Knez</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/a7vlh3dxtuvt1du/Pojte%2C%20pojte%2C%20drobne%20ptice%20%28deklamacija%29%20Brina%20%C5%BDuji%C4%87.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Pojte, pojte, drobne ptice (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Brina Žujić</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/2txdcijuf3panta/Navzgor%20se%20%C5%A1iri%20ro%C5%BEmarin%20Lovro%20Hirci%2C%20Maj%20Kova%C4%8Di%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Navzgor se širi rožmarin</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lovro Hirci, Maj Kovačič</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/2uwk2abe85oohd3/Zakrivljeno%20palico%20v%20roki%20Eva%20Stopar%2C%20Tia%20Rom%C5%A1ak%2C%20Anja%20Starc.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Zakrivljeno palico v roki</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Eva Stopar, Tia Romšak, Anja Starc</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/5wjh1htel2gp3hg/Dekle%20je%20po%20vodo%20%C5%A1la%20Ela%20A%C5%A1kerc%2C%20Anja%20Starc%2C%20Iris%20in%20Sara%20Kolari%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Dekle je po vodo šla</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ela Aškerc, Anja Starc, Iris in Sara Kolarič</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/vkaq9wzwejnb4q3/Mam%27ca%2C%20poslu%C5%A1ajte%20%28deklamacija%29%20Martin%20Ojster%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Mam'ca, poslušajte (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Martin Ojsteršek</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/dp86fx7w7lj50ox/Oj%2C%20lepo%20je%20res%20na%20de%C5%BEeli%20Aneja%20Tovornik.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Oj, lepo je res na deželi</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Aneja Tovornik</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/tunebqt6yxpr569/Ena%20pti%C4%8Dka%20priletela%20Ana%20Zeme.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Ena ptička priletela</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ana Zeme</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/4ob4r7wqnvufg8n/%C5%A0ara%20ptica%20%28deklamacija%29%20Ivana%20Trupi.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Šara ptica (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ivana Trupi</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/74zfvqm1h8hbfyg/Tri%20ti%C4%8Dice%20Doroteja%2C%20Katarina%20in%20Tinkara%20Horjak.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Tri tičice</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Doroteja, Katarina in Tinkara Horjak</h3></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b3" class="back-content">
+                            <h1 style="border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; border-bottom-style: double; padding-bottom: 20px; margin-bottom: 20px;" >Enota Radeče</h1>
+                            <ul style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/q8hnnpmjw16xbig/Majhna%20sem%20bila%2C%20Ringa%2C%20ringa%2C%20raja%20u%C4%8Denci%20pred%C5%A1olske%20glasbene%20vzgoje.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Majhna sem bila,
+                                        Ringa, ringa, raja</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">učenci predšolske glasbene vzgoje</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/rkpajzvit6itcst/Zaj%C4%8Dek%2C%20al%27%20se%20ne%20boji%C5%A1%2C%20Biba%20leze%20u%C4%8Denci%20glasbene%20pripravnice.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Zajček, al' se ne bojiš,
+                                        Biba leze</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">učenci glasbene pripravnice</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/ry2l0a09oduswlt/Tam%20pri%20Kanali%20%28deklamacija%29%20Tja%C5%A1a%20Bre%C4%8Dko.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Tam pri Kanali (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tjaša Brečko</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/d5djxgroot44uzc/Bar%C4%8Dica%20po%20morju%20plava%20Emilija%20Sigmund.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Barčica po morju plava</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Emilija Sigmund</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/3lu2hjt5rba51w8/Izidor%20ov%C4%8Dice%20pasel%20Oskar%20Kav%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Izidor ovčice pasel</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Oskar Kavšek</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/qqsrxssew1mga80/Janez%20banez%20%28deklamacija%29%20Zarja%20Gros.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Janez banez (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Zarja Gros</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/qp1loled20ph0yt/Izak%2C%20Jakob%2C%20Abraham%20Hana%20Jager.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Izak, Jakob, Abraham</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Hana Jager</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/jurivmfj5gkzrxa/Ob%20bistrem%20potoku%20je%20mlin%20Tara%20Ko%C5%BEar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Ob bistrem potoku je mlin</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tara Kožar</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/ry8zjbe6a9sqbtd/Po%20Koro%C5%A1kem%20po%20Kranjskem%20Ema%20Novak.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Po Koroškem po Kranjskem</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ema Novak</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/36zsn71cvgpv9z5/Gril%20gode%20%28deklamacija%29%20Hana%20Jager.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Gril gode (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Hana Jager</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/4x22arigcdvp3fz/Dekle%20je%20po%20vodo%20%C5%A1la%20Sara%20Zupan.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Dekle je po vodo šla</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Sara Zupan</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/01bfze06h7xvnwu/Sijaj%2C%20sijaj%2C%20son%C4%8Dece%20O%C5%BEbolt%20Wetz.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Sijaj, sijaj, sončece</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ožbolt Wetz</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/uoktusxzggaalwf/Muca%20je%20mijavkala%28deklamacija%29%20Tara%20Ko%C5%BEar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Muca je mijavkala(deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tara Kožar</h3></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--4-->
+                <div id="p4" class="paper">
+                    <div class="front">
+                        <div id="f4" class="front-content">
+                            <ul style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/ve97bobnft86ag6/Rasla%20je%20jelka%20Mojca%20Stopin%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Rasla je jelka</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Mojca Stopinšek</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/9te85tpvreztfw7/Jaz%20pa%20grem%20na%20zeleno%20trav%27co%20Lea%20Kravogel.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Jaz pa grem na zeleno trav'co</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lea Kravogel</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/r1p89tzc5u71y78/Miha%20mihav%20%28deklamacija%29%20Tja%C5%A1a%20Bre%C4%8Dko.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Miha mihav (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tjaša Brečko</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/81wjrnh3iwf9tfk/Ple%C5%A1i%2C%20ple%C5%A1i%2C%20%C4%8Drni%20kos%20Iva%20Razbor%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Pleši, pleši, črni kos</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Iva Razboršek</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/k9m4y93shyah28y/Kje%20so%20tiste%20stezice%20Lulu%20Ronja%20Nikoli%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Kje so tiste stezice</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lulu Ronja Nikolič</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/bp2clzue9hgjyft/Pomlad%20Lana%20Rogel.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Pomlad</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lana Rogel</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/xkcr21tidncfaub/Moj%20o%C4%8Dka%20je%20ribi%C4%8D%20%28deklamacija%29%20Zarja%20Gros.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Moj očka je ribič (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Zarja Gros</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/c8a3krhvv1yuy6v/Ro%C5%BEic%20ne%20bom%20trgala%20Milla%20Marjanovi%C4%87.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Rožic ne bom trgala</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Milla Marjanović</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/4yn281w658yvt4p/Igra%20v%20kolo%20jabolko%20Tajra%20Mu%C5%A1inovi%C4%87%2C%20Klara%20Mlakar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Igra v kolo jabolko</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tajra Mušinović, Klara Mlakar</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/l8jjyvnlalmbuaq/Petelin%C4%8Dek%20%28deklamacija%29%20Hana%20Jager.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Petelinček (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Hana Jager</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/jshbr7tcbpajsfs/%C4%8Cin%2C%20%C4%8Din%2C%20Dre%C5%BEnica%20Teja%20Repov%C5%BE.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Čin, čin, Drežnica</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Teja Repovž</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/skejlwsxkmrxisc/Pastirc%20pa%20pase%20Bor%20Romih.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Pastirc pa pase</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Bor Romih</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/984bfw9lf83ttf0/%C5%A0ara%20ptica%20%28deklamacija%29%20Tara%20Ko%C5%BEar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Šara ptica (deklamacija)</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tara Kožar</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/u0p57qvdeqxr4ju/Sini%C4%8Dka%20se%20je%20usedla%20Matev%C5%BE%20Lazar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Sinička se je usedla</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Matevž Lazar</h3></button>
+                                </li>
+                                <li><button class="linkimena" name="https://www.dropbox.com/s/cq8izff0jcgnhi7/Na%20planincah%20lu%C5%A1tno%20biti%20Nu%C5%A1a%20Gorenjec.mp4?raw=1" id="trailer" onclick="playVideo(this);">
+                                    <h3 style="text-align: left;"><strong>Na planincah luštno biti</strong></h3>
+                                    <h3 style="font-style:italic; text-align: left; font-weight: normal;">Nuša Gorenjec</h3></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div id="b4" class="back-content">
+                            <div style="border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; padding-top: 20px; border-top-style: double; "></div>
+                            <div style="border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; padding-bottom: 135%; border-bottom-style: double; "></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Paper 2 -->
-            <div id="p2" class="paper">
-                <div class="front">
-                    <div id="f2" class="front-content" style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
-                        <h1>E-pesmarica Glasbeni tobogan</h1>
-                    </br>   <p><strong>Spoštovani učenci, starši in ostali obiskovalci spletne strani, prisrčno pozdravljeni v naši družbi!</p>
-                    </br>   <p>Vsako šolsko leto načrtno vključujemo ljudsko tematiko v učni proces in dajemo slovenski ljudski pesmi pomembno vlogo pri našem glasbeno-plesnem ustvarjanju. Po Glasbenem toboganu se bomo spustili naravnost v zakladnico slovenskih ljudskih pesmi, v zakladnico, kjer so shranjeni najdragocenejši spomini naših prednikov – dedkov, babic, ki so jim jih zaupali njihovi dedki in babice, da so nam jih po spominu lahko prepevali.</p>
-                       <p>V E-pesmarici  lahko prisluhnete izštevankam, pesmim o živalih, delu, pripovednim pesmim, skratka o življenju preprostega človeka, ki je bilo že od nekdaj navdih za nastanek pesmi.</p>
-                    </br>   <p>Povabilu k pripravi in izvedbi nastopa ljudskih pesmi in izštevank so se odzvali učenci in učiteljice nauka o glasbi, solfeggia, predšolske glasbene vzgoje in glasbene pripravnice. V okviru predpisanih učnih vsebin vsako šolsko leto pri pouku obravnavamo tudi ljudsko tematiko. V šolskem letu 2021/2022 je bilo to  še s posebnim poudarkom na podpori projektu Erasmus+. Učenci so ustvarili tudi risbe in s tem obogatili E-pesmarico. Zahvaljujem se vsem snovalcem pesmarice in kolegom učiteljem, ki so spremljali učence z inštrumenti. Uporabnikom E-pesmarice želimo obilo užitkov ob poslušanju in učenju ljudskega gradiva.</p>
-                    </br>   <p>Rosana Jakšič, ravnateljica</p></strong>
-                        <!--<button name="https://www.dropbox.com/s/iprj2q887gfco4t/Dekle%20je%20po%20vodo%20%C5%A1la%20Ela%20A%C5%A1kerc%2C%20Anja%20Starc%2C%20Iris%20in%20Sara%20Kolari%C4%8D.mp4?raw=1" class="btn btn-sm btn-dark" id="trailer" style="font-size:large;" onclick="playVideo(this);">Ime Priimek</button>-->
-                    </div>
-                </div>
-                <div class="back">
-                    <div id="b2" class="back-content">
-                        <h1 style="border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; border-bottom-style: double; padding-bottom: 20px; margin-bottom: 20px;">Enota Laško</h1>
-                        
-                        <ul style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/p2v83z46gplr1m6/Kje%20so%20pesmice%20doma%20%28deklamacija%29%20Ema%20in%20Tim%20Kr%C3%BCcken%2C%20Anika%20Krasovec.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Kje so pesmice doma (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ema in Tim Krücken, Anika Krašovec</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/54cujllms0npcya/Zaj%C4%8Dek%2C%20al%27%20se%20ne%20boji%C5%A1%2C%20%20%20%20Biba%20leze%20u%C4%8Denci%20glasbene%20pripravnice.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Zajček, al' se ne bojiš,
-                                    Biba leze</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">učenci glasbene pripravnice</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/qnog8nc3rg8lcx6/Rasla%20je%20jelka%20Nejc%20%C5%BDupani%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Rasla je jelka</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Nejc Županič</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/2mrl2nxff6uj3yl/Gril%20gode%20%28deklamacija%29%20An%C5%BEe%20A%C5%A1kerc.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Gril gode (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Anže Aškerc</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/ss5aes1cnd1m03q/Igra%20v%20kolo%20jabolko%20Zarja%20Juhart.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Igra v kolo jabolko</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Zarja Juhart</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/wjlmd6scb98k61q/Oj%2C%20lepo%20je%20res%20na%20de%C5%BEeli%20Mia%20Rezec.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Oj, lepo je res na deželi</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Mia Rezec</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/onj56mu3i1dq3ro/Marko%20ska%C4%8De%20Maj%20%C5%A0ola%20Oro%C5%BEim.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Marko skače</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Maj Šola Orožim</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/t24aq4n13wq8y98/Koko%C5%A1ke%20%28deklamacija%29%20Zoja%20Omahna.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Kokoške (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Zoja Omahna</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/97d3rm7qlsdbu52/Pozdravljena%2C%20trobentica%20Ur%C5%A1ka%20Holcer.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Pozdravljena, trobentica</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Urška Holcer</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/0rklnrnc4g6jtv9/Majhna%20sem%20bila%20Lara%20Jan%C4%8Di%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Majhna sem bila</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lara Jančič</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/6iw61kimzepjg6z/Ple%C5%A1i%2C%20ple%C5%A1i%2C%20%C4%8Drni%20kos%20Leon%20Razbor%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Pleši, pleši, črni kos</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Leon Razboršek</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/nhisrgrbi5v0a24/Na%C5%A1a%20%C5%A0pela%20%28deklamacija%29%20Ivana%20Ambro%C5%BE.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Naša Špela (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ivana Ambrož</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/rs23xsw6t9md4qq/Izak%2C%20Jakob%2C%20Abraham%20An%C5%BEe%20Stopar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Izak, Jakob, Abraham</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Anže Stopar</h3></button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Paper 3 -->
-            <div id="p3" class="paper">
-                <div class="front">
-                    <div id="f3" class="front-content">
-                        <ul style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/u8erm56zo9dcnpp/Janko%2C%20kaj%20bo%C5%A1%20jutri%20delal%20Mija%20in%20Miha%20Mavrin.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Janko, kaj boš jutri delal</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Mija in Miha Mavrin</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/ikpjb1zc3e73tg1/Sem%20deklica%20mlada%2C%20vesela%20%C5%A0pela%20Knez.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Sem deklica mlada, vesela</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Špela Knez</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/a7vlh3dxtuvt1du/Pojte%2C%20pojte%2C%20drobne%20ptice%20%28deklamacija%29%20Brina%20%C5%BDuji%C4%87.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Pojte, pojte, drobne ptice (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Brina Žujić</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/2txdcijuf3panta/Navzgor%20se%20%C5%A1iri%20ro%C5%BEmarin%20Lovro%20Hirci%2C%20Maj%20Kova%C4%8Di%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Navzgor se širi rožmarin</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lovro Hirci, Maj Kovačič</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/2uwk2abe85oohd3/Zakrivljeno%20palico%20v%20roki%20Eva%20Stopar%2C%20Tia%20Rom%C5%A1ak%2C%20Anja%20Starc.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Zakrivljeno palico v roki</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Eva Stopar, Tia Romšak, Anja Starc</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/5wjh1htel2gp3hg/Dekle%20je%20po%20vodo%20%C5%A1la%20Ela%20A%C5%A1kerc%2C%20Anja%20Starc%2C%20Iris%20in%20Sara%20Kolari%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Dekle je po vodo šla</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ela Aškerc, Anja Starc, Iris in Sara Kolarič</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/vkaq9wzwejnb4q3/Mam%27ca%2C%20poslu%C5%A1ajte%20%28deklamacija%29%20Martin%20Ojster%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Mam'ca, poslušajte (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Martin Ojsteršek</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/dp86fx7w7lj50ox/Oj%2C%20lepo%20je%20res%20na%20de%C5%BEeli%20Aneja%20Tovornik.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Oj, lepo je res na deželi</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Aneja Tovornik</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/tunebqt6yxpr569/Ena%20pti%C4%8Dka%20priletela%20Ana%20Zeme.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Ena ptička priletela</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ana Zeme</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/4ob4r7wqnvufg8n/%C5%A0ara%20ptica%20%28deklamacija%29%20Ivana%20Trupi.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Šara ptica (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ivana Trupi</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/74zfvqm1h8hbfyg/Tri%20ti%C4%8Dice%20Doroteja%2C%20Katarina%20in%20Tinkara%20Horjak.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Tri tičice</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Doroteja, Katarina in Tinkara Horjak</h3></button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="back">
-                    <div id="b3" class="back-content">
-                        <h1 style="border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; border-bottom-style: double; padding-bottom: 20px; margin-bottom: 20px;" >Enota Radeče</h1>
-                        <ul style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/q8hnnpmjw16xbig/Majhna%20sem%20bila%2C%20Ringa%2C%20ringa%2C%20raja%20u%C4%8Denci%20pred%C5%A1olske%20glasbene%20vzgoje.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Majhna sem bila,
-                                    Ringa, ringa, raja</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">učenci predšolske glasbene vzgoje</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/rkpajzvit6itcst/Zaj%C4%8Dek%2C%20al%27%20se%20ne%20boji%C5%A1%2C%20Biba%20leze%20u%C4%8Denci%20glasbene%20pripravnice.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Zajček, al' se ne bojiš,
-                                    Biba leze</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">učenci glasbene pripravnice</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/ry2l0a09oduswlt/Tam%20pri%20Kanali%20%28deklamacija%29%20Tja%C5%A1a%20Bre%C4%8Dko.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Tam pri Kanali (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tjaša Brečko</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/d5djxgroot44uzc/Bar%C4%8Dica%20po%20morju%20plava%20Emilija%20Sigmund.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Barčica po morju plava</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Emilija Sigmund</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/3lu2hjt5rba51w8/Izidor%20ov%C4%8Dice%20pasel%20Oskar%20Kav%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Izidor ovčice pasel</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Oskar Kavšek</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/qqsrxssew1mga80/Janez%20banez%20%28deklamacija%29%20Zarja%20Gros.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Janez banez (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Zarja Gros</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/qp1loled20ph0yt/Izak%2C%20Jakob%2C%20Abraham%20Hana%20Jager.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Izak, Jakob, Abraham</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Hana Jager</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/jurivmfj5gkzrxa/Ob%20bistrem%20potoku%20je%20mlin%20Tara%20Ko%C5%BEar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Ob bistrem potoku je mlin</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tara Kožar</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/ry8zjbe6a9sqbtd/Po%20Koro%C5%A1kem%20po%20Kranjskem%20Ema%20Novak.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Po Koroškem po Kranjskem</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ema Novak</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/36zsn71cvgpv9z5/Gril%20gode%20%28deklamacija%29%20Hana%20Jager.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Gril gode (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Hana Jager</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/4x22arigcdvp3fz/Dekle%20je%20po%20vodo%20%C5%A1la%20Sara%20Zupan.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Dekle je po vodo šla</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Sara Zupan</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/01bfze06h7xvnwu/Sijaj%2C%20sijaj%2C%20son%C4%8Dece%20O%C5%BEbolt%20Wetz.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Sijaj, sijaj, sončece</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Ožbolt Wetz</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/uoktusxzggaalwf/Muca%20je%20mijavkala%28deklamacija%29%20Tara%20Ko%C5%BEar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Muca je mijavkala(deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tara Kožar</h3></button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--4-->
-            <div id="p4" class="paper">
-                <div class="front">
-                    <div id="f4" class="front-content">
-                        <ul style="background-image: radial-gradient(rgba(255, 255, 255, 0.375), rgba(255, 255, 255, 0) 75%);">
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/ve97bobnft86ag6/Rasla%20je%20jelka%20Mojca%20Stopin%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Rasla je jelka</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Mojca Stopinšek</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/9te85tpvreztfw7/Jaz%20pa%20grem%20na%20zeleno%20trav%27co%20Lea%20Kravogel.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Jaz pa grem na zeleno trav'co</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lea Kravogel</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/r1p89tzc5u71y78/Miha%20mihav%20%28deklamacija%29%20Tja%C5%A1a%20Bre%C4%8Dko.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Miha mihav (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tjaša Brečko</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/81wjrnh3iwf9tfk/Ple%C5%A1i%2C%20ple%C5%A1i%2C%20%C4%8Drni%20kos%20Iva%20Razbor%C5%A1ek.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Pleši, pleši, črni kos</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Iva Razboršek</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/k9m4y93shyah28y/Kje%20so%20tiste%20stezice%20Lulu%20Ronja%20Nikoli%C4%8D.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Kje so tiste stezice</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lulu Ronja Nikolič</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/bp2clzue9hgjyft/Pomlad%20Lana%20Rogel.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Pomlad</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Lana Rogel</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/xkcr21tidncfaub/Moj%20o%C4%8Dka%20je%20ribi%C4%8D%20%28deklamacija%29%20Zarja%20Gros.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Moj očka je ribič (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Zarja Gros</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/c8a3krhvv1yuy6v/Ro%C5%BEic%20ne%20bom%20trgala%20Milla%20Marjanovi%C4%87.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Rožic ne bom trgala</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Milla Marjanović</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/4yn281w658yvt4p/Igra%20v%20kolo%20jabolko%20Tajra%20Mu%C5%A1inovi%C4%87%2C%20Klara%20Mlakar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Igra v kolo jabolko</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tajra Mušinović, Klara Mlakar</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/l8jjyvnlalmbuaq/Petelin%C4%8Dek%20%28deklamacija%29%20Hana%20Jager.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Petelinček (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Hana Jager</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/jshbr7tcbpajsfs/%C4%8Cin%2C%20%C4%8Din%2C%20Dre%C5%BEnica%20Teja%20Repov%C5%BE.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Čin, čin, Drežnica</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Teja Repovž</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/skejlwsxkmrxisc/Pastirc%20pa%20pase%20Bor%20Romih.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Pastirc pa pase</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Bor Romih</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/984bfw9lf83ttf0/%C5%A0ara%20ptica%20%28deklamacija%29%20Tara%20Ko%C5%BEar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Šara ptica (deklamacija)</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Tara Kožar</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/u0p57qvdeqxr4ju/Sini%C4%8Dka%20se%20je%20usedla%20Matev%C5%BE%20Lazar.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Sinička se je usedla</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Matevž Lazar</h3></button>
-                            </li>
-                            <li><button class="linkimena" name="https://www.dropbox.com/s/cq8izff0jcgnhi7/Na%20planincah%20lu%C5%A1tno%20biti%20Nu%C5%A1a%20Gorenjec.mp4?raw=1" id="trailer" onclick="playVideo(this);">
-                                <h3 style="text-align: left;"><strong>Na planincah luštno biti</strong></h3>
-                                <h3 style="font-style:italic; text-align: left; font-weight: normal;">Nuša Gorenjec</h3></button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="back">
-                    <div id="b4" class="back-content">
-                        <div style="border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; padding-top: 20px; border-top-style: double; "></div>
-                        <div style="border-image: linear-gradient(to right,rgba(255, 248, 58, 0), #fff83a, rgba(255, 248, 58, 0)) 30; padding-bottom: 135%; border-bottom-style: double; "></div>
-                    </div>
-                </div>
-            </div>
+            <!--naprej-->
+            <button class="gumb" id="next-btn" style="right: 1%;">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
-        <!--naprej-->
-        <button class="gumb" id="next-btn" style="right: 1%;">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
     </body>
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#body').show();
+            $('#msg').hide();
+        });
+    </script>
 </html>
